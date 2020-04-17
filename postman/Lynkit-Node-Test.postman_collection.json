@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "d503f390-266d-42df-93ab-9b81ca2dac5e",
+		"name": "Lynkit-Node-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ques-1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": {\n\t\t\"email\": \"sunny.tyagi@mailinator.com\",\n\t\t\"firstName\": \"Sunny\",\n\t\t\"lastName\": \"Tyagi\",\n\t\t\"addresses\": [{\n\t\t\t\"address\": \"Srk Apartment\",\n\t\t\t\"city\": \"delhi\",\n\t\t\t\"postcode\": \"110030\"\n\t\t}, {\n\t\t\t\"address\": \"Village and Post-Kutesra\",\n\t\t\t\"city\": \"muzaffarnagar\",\n\t\t\t\"postcode\": \"251001\"\n\t\t}]\n\t},\n\t\"category\": {\n\t\t\"name\": \"Jeans\"\n\t},\n\t\"product\": {\n\t\t\"title\": \"Blue Color Jeans\",\n\t\t\"size\": \"l\",\n\t\t\"price\": 70\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/add",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ques-3 (A)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/users?city=Muzaffarnagar",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Muzaffarnagar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ques-2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/append",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"append"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
